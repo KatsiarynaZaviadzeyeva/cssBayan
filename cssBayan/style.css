@@ -4,20 +4,61 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Golos Text', Arial, sans-serif;
     font-weight: 400;
+    font-size: 2rem;
     line-height: 1.2;
     color: rgb(82, 79, 79);
     background-color: rgb(224, 239, 231);
 }
 
+details summary::marker {
+    display: none;
+    content: "";
+}
+
+.sccBayan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .wrapper {
-    margin: 0 auto;
-    padding: 40px 20px;
+    margin: 25px 45px;
 }
 
 .title {
+    text-align: center;
     font-weight: 600;
     margin-bottom: 25px;
+}
+
+.accordion {
+    width: 600px;
+}
+
+.accordion__title {
+    border-bottom: 1px solid rgb(32, 30, 30);
+    padding: 15px 0px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s all;
+    position: relative;
+}
+
+.accordion__title:hover {
+    color: rgb(32, 30, 30);
+    font-size: 2.1rem;
+}
+
+.accordion__image {
+    max-width: 50%;
+    display: block;
+    margin: 10px auto;
 }
