@@ -14,8 +14,8 @@ body {
     font-weight: 400;
     font-size: 2rem;
     line-height: 1.2;
-    color: rgb(82, 79, 79);
-    background-color: rgb(224, 239, 231);
+    color: rgb(201, 190, 190);
+    background-image: url("./assets/img/coffee.jpg");
 }
 
 details summary::marker {
@@ -30,21 +30,26 @@ details summary::marker {
 }
 
 .wrapper {
-    margin: 25px 45px;
+    margin: 0px auto;
+    width: 800px;
+    height: 100%;
+    background-color: #0e0e0e;
 }
 
 .title {
     text-align: center;
     font-weight: 600;
     margin-bottom: 25px;
+    margin-top: 50px;
 }
 
 .accordion {
-    width: 600px;
+    
 }
 
 .accordion__title {
-    border-bottom: 1px solid rgb(32, 30, 30);
+    margin: 0 15px;
+    border-bottom: 1px solid rgb(201, 190, 190);
     padding: 15px 0px;
     outline: none;
     cursor: pointer;
@@ -52,8 +57,12 @@ details summary::marker {
     position: relative;
 }
 
+.accordion__title:last-child {
+    border-bottom: 0;
+}
+
 .accordion__title:hover {
-    color: rgb(32, 30, 30);
+    color: rgb(240, 234, 234);
     font-size: 2.1rem;
 }
 
