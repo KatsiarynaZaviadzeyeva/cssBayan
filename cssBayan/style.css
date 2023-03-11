@@ -43,10 +43,6 @@ details summary::marker {
     margin-top: 50px;
 }
 
-.accordion {
-    
-}
-
 .accordion__title {
     margin: 0 15px;
     border-bottom: 1px solid rgb(201, 190, 190);
@@ -61,6 +57,21 @@ details summary::marker {
     border-bottom: 0;
 }
 
+.accordion__item:not([open]) .accordion__title:hover:after {
+    display: block;
+    content: '🠺';
+    font-size: 40px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s all;
+}
+
+.accordion__item[open] .accordion_title::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
 .accordion__title:hover {
     color: rgb(240, 234, 234);
     font-size: 2.1rem;
@@ -71,3 +82,4 @@ details summary::marker {
     display: block;
     margin: 10px auto;
 }
+
