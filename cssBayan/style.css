@@ -32,7 +32,7 @@ details summary::marker {
 .wrapper {
     margin: 0px auto;
     width: 800px;
-    height: 100%;
+    height: 100vh;
     background-color: #0e0e0e;
 }
 
@@ -43,21 +43,42 @@ details summary::marker {
     margin-top: 50px;
 }
 
-.accordion__title {
-    margin: 0 15px;
+.accordion__item {
+    display: flex;
+}
+
+.accordion__control {
     border-bottom: 1px solid rgb(201, 190, 190);
-    padding: 15px 0px;
-    outline: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.accordion__title {
+    color: rgb(201, 190, 190);
+    font-family: 'Golos Text', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.2;
+    width: 100%;
+    margin: 10px;
     cursor: pointer;
     transition: 0.5s all;
-    position: relative;
+}
+
+.accordion__ico {
+    background: url(./assets/svg/arrow.svg) no-repeat center right;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
 }
 
 .accordion__title:last-child {
     border-bottom: 0;
 }
 
-.accordion__item:not([open]) .accordion__title:hover:after {
+/*.accordion:hover>.accordion__item>.accordion__title::after {
     display: block;
     content: '🠺';
     font-size: 40px;
@@ -68,18 +89,40 @@ details summary::marker {
     transition: 0.5s all;
 }
 
-.accordion__item[open] .accordion_title::after {
-    transform: translateY(-50%) rotate(180deg);
+.accordion__item[open] {
+    color: rgb(240, 234, 234);
+    font-size: 2.1rem;
+}
+
+.accordion:hover>.accordion__item[open]>.accordion__title::after {
+    display: block;
+    content: '🠻';
+    font-size: 40px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s all;
+}
+
+.accordion__item[open] .accordion__title:hover::after {
+    display: block;
+    content: '🠻';
+    font-size: 40px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s all;
 }
 
 .accordion__title:hover {
     color: rgb(240, 234, 234);
     font-size: 2.1rem;
-}
+}*/
 
 .accordion__image {
     max-width: 50%;
-    display: block;
+    display: none;
     margin: 10px auto;
 }
-
